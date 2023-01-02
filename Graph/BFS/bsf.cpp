@@ -18,6 +18,30 @@ vector<int>adj_node[100];
 bool complited[100];
 
 
+void bfs(int source){
+    memset(complited,false,sizeof(complited));
+    queue<int>q;
+    q.push(source);
+    while(!q.empty()){
+        int frnt = q.front();
+        q.pop();
+        if(complited[frnt] == false){
+            cout<<frnt<<endl;
+            complited[frnt] = true;
+        }
+        
+        for(int i = 0; i < adj_node[frnt].size();i++){
+            int value = adj_node[frnt][i];
+            if(complited[value] == false){
+                q.push(value);
+            }
+            
+        }
+    }
+
+}
+
+
 int main(){
     int nodes,edges;
     cin>>nodes>>edges;
