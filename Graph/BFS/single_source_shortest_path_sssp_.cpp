@@ -23,3 +23,33 @@ Level of 3: 3
 Level of 4: 3
 Level of 5: 2
  */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+const int N = 1e5;
+vector<int>adj_list[N]; // a vector array for storing adjecnt node.
+int visited[N]; // an array to keep track of visited nodes.
+int level[N]; //an array to count the level of nodes.
+
+
+
+
+int main(){
+
+    int n,e;
+    cin>>n>>e;
+    while(e--){
+        int x,y;
+        cin>>x>>y;
+        // pusing value in the adjecnt list for undirected or bi-directional graph.
+        adj_list[x].push_back(y); 
+        adj_list[y].push_back(x);
+    }
+    bfs(0); // source node is 0 for bfs
+    
+
+
+    return 0;
+}
