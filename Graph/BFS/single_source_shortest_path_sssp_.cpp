@@ -38,7 +38,15 @@ void bfs(int source){
     q.push(source); // initial element of the queue is the source node of the graph.
     level[source]= 0; // setting the initial level of source node is 0.we know that the leveling starts from 0.
 
+    while(!q.empty()){ // loop will execute untill the queue will be empty.
+        int parent = q.front(); // Capturing the front value of queue.
+        q.pop();    // removine the front value from queue.
 
+        if(!visited[parent]){ // if the front element of queue is not visited then it enterd to the if condition and set true in the index of front in the visited array.
+            visited[parent] = true;
+        }
+
+    }
 
 }
 
