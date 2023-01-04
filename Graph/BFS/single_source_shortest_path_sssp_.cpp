@@ -45,6 +45,14 @@ void bfs(int source){
         if(!visited[parent]){ // if the front element of queue is not visited then it enterd to the if condition and set true in the index of front in the visited array.
             visited[parent] = true;
         }
+        
+        
+        for(int child:adj_list[parent]){ // it will take each value from the adjecent node of front of queue.
+            if(!visited[child]){ //If the child or adjecent node is not visited then...
+                level[child] = level[parent]+1; // it increase the level of node. parent node level + 1 means child is in next level.
+                q.push(child); // pushing child in the  queue.
+            }
+        }
 
     }
 
