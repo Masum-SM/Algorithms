@@ -33,7 +33,14 @@ vector<int>adj_list[N]; // a vector array for storing adjecnt node.
 int visited[N]; // an array to keep track of visited nodes.
 int level[N]; //an array to count the level of nodes.
 
+void bfs(int source){
+    queue<int>q; // for bfs, we use a queue.
+    q.push(source); // initial element of the queue is the source node of the graph.
+    level[source]= 0; // setting the initial level of source node is 0.we know that the leveling starts from 0.
 
+
+
+}
 
 
 int main(){
