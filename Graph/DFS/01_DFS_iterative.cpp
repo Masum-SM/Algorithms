@@ -29,8 +29,11 @@ void dfs(int source){
             cout<<temp<<" ";
             visited[temp] = true;
         }
-
-        
+        for(auto child:adj_node[temp]){
+            if(!visited[child]){
+                st.push(child);
+            }
+        }
         
     }
 
