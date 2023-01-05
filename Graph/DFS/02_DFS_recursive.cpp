@@ -17,7 +17,18 @@ const int N = 1e5;
 vector<int>adj_node[N];
 int visited[N];
 
+//================================> DFS <========================================
+void dfs(int source){
+    cout<<source<<" ";
+    visited[source]= true;
+    for(auto child:adj_node[source]){
+        if(visited[child]){
+            continue;
+        }
+        dfs(child); // RECURSIVE CALL.
+    }
 
+}
 
 int main(){
     int nodes,edges;
