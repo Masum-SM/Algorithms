@@ -17,6 +17,24 @@ const int N = 1e5; // 1e5 == 10^5
 vector<int>adj_node[N]; // for storing adjecnt list of a node..
 int visited[N];
 
+//------------------------------------> DFS <--------------------------------
+void dfs(int source){
+    stack<int>st;
+    st.push(source);
+    
+    while(!st.empty()){
+        int temp = st.top();
+        st.pop();
+        if(!visited[temp]){
+            cout<<temp<<" ";
+            visited[temp] = true;
+        }
+
+        
+        
+    }
+
+}
 
 int main(){
     int nodes,edges;
