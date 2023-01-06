@@ -38,6 +38,16 @@ int dx[] = {0,0,-1,1};
 int dy[] = {1,-1,0,0};
 
 
+bool is_inMaze(pair<int,int>co_ord){
+    int x = co_ord.first;
+    int y = co_ord.second;
+
+    if(x>=0 && x<n && y>=0 && y<m){
+        return true;
+    }
+    return false;
+}
+
 void bfs(pair<int,int>src){
     queue< pair<int,int> >q;
     int x = src.first;  // first value of pair.
