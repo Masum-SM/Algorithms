@@ -34,6 +34,8 @@ so possible adjecnt cell for a cell will be..
     int dy[] = {1,-1,0,0};
  */
 
+int dx[] = {0,0,-1,1};
+int dy[] = {1,-1,0,0};
 
 
 void bfs(pair<int,int>src){
