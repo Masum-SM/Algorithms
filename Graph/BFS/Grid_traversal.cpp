@@ -37,7 +37,6 @@ so possible adjecnt cell for a cell will be..
 int dx[] = {0,0,-1,1};
 int dy[] = {1,-1,0,0};
 
-
 bool is_inMaze(pair<int,int>co_ord){
     int x = co_ord.first;
     int y = co_ord.second;
@@ -56,7 +55,6 @@ bool is_safe(pair<int,int>co_ord){
     }
     return true;
 } 
-
 void bfs(pair<int,int>src){
     queue< pair<int,int> >q;
     int x = src.first;  // first value of pair.
@@ -72,29 +70,23 @@ void bfs(pair<int,int>src){
 
         int x = frnt.first;
         int y = frnt.second;
+
         for(int i = 0 ; i < 4 ; i++){
             int new_x = x + dx[i];
             int new_y = y + dy[i];
 
             pair<int,int>adj_cell = {new_x,new_y};
-              
+
             if(is_inMaze(adj_cell) && is_safe(adj_cell) && visited[new_x][new_y] == 0){
                 visited[new_x][new_y] = 1;
                 level[new_x][new_y] = level[x][y]+1;
                 q.push(adj_cell);
             }
-            
-
-
         }
-
-
 
     }
 
 }
-
-
 
 int main(){
     cin>>n>>m;
@@ -117,6 +109,9 @@ int main(){
             }
         }
     }
+
+    bfs(src);
+
     if(level[dst.first][dst.second] == -1){
         cout<<"No"<<endl;
     }
@@ -128,3 +123,4 @@ int main(){
 
     return 0;
 }
+
