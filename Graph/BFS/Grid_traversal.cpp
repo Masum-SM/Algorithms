@@ -18,6 +18,22 @@ int n,m;
 const int N = 2002;
 int maze[N][N], visited[N][N], level[N][N];
 
+/* 
+according the problem,
+we can move into right, left, top and down not corner movement.
+so possible adjecnt cell for a cell will be..
+(x,y) --> top -->(x , y+1)
+      --> bottom -->(x , y-1)
+      --> right -->(x+1 , y)
+      --> left -->(x-1 , y)
+
+    x = 0  0   1   -1
+    y = 1  -1  0   0
+
+    int dx[] = {0,0,1,-1};
+    int dy[] = {1,-1,0,0};
+ */
+
 
 
 void bfs(pair<int,int>src){
@@ -40,6 +56,8 @@ void bfs(pair<int,int>src){
             int new_y = y + dy[i];
 
             pair<int,int>adj_cell = {new_x,new_y};
+            
+
 
         }
 
