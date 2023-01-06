@@ -35,6 +35,13 @@ void bfs(pair<int,int>src){
 
         int x = frnt.first;
         int y = frnt.second;
+        for(int i = 0 ; i < 4 ; i++){
+            int new_x = x + dx[i];
+            int new_y = y + dy[i];
+
+            pair<int,int>adj_cell = {new_x,new_y};
+
+        }
 
 
 
