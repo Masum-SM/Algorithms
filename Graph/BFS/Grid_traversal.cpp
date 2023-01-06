@@ -9,3 +9,11 @@ sample input:
 ########
 
  */
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int n,m;
+const int N = 2002;
+int maze[N][N], visited[N][N], level[N][N];
