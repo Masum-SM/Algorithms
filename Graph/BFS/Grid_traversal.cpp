@@ -39,6 +39,13 @@ int main(){
             }
         }
     }
+    if(level[dst.first][dst.second] == -1){
+        cout<<"No"<<endl;
+    }
+    else{
+        cout<<"Yes"<<endl;
+        cout<<level[dst.first][dst.second]<<endl;
+    }
 
 
     return 0;
