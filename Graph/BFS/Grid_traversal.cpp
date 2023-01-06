@@ -18,6 +18,32 @@ int n,m;
 const int N = 2002;
 int maze[N][N], visited[N][N], level[N][N];
 
+
+
+void bfs(pair<int,int>src){
+    queue< pair<int,int> >q;
+    int x = src.first;  // first value of pair.
+    int y = src.second; // second value of pair.
+    visited[x][y] = 1;  // source visited.
+    level[x][y] = 0;    // set level of source at 0.
+    q.push(src);        // source pushed into queue.
+
+
+    while(!q.empty()){
+        pair<int,int>frnt = q.front();
+        q.pop();
+
+        int x = frnt.first;
+        int y = frnt.second;
+
+
+
+    }
+
+}
+
+
+
 int main(){
     cin>>n>>m;
     pair<int,int>src,dst;
