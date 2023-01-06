@@ -77,6 +77,12 @@ void bfs(pair<int,int>src){
             int new_y = y + dy[i];
 
             pair<int,int>adj_cell = {new_x,new_y};
+              
+            if(is_inMaze(adj_cell) && is_safe(adj_cell) && visited[new_x][new_y] == 0){
+                visited[new_x][new_y] = 1;
+                level[new_x][new_y] = level[x][y]+1;
+                q.push(adj_cell);
+            }
             
 
 
