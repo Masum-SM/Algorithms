@@ -48,6 +48,15 @@ bool is_inMaze(pair<int,int>co_ord){
     return false;
 }
 
+bool is_safe(pair<int,int>co_ord){
+    int x = co_ord.first;
+    int y = co_ord.second;
+    if(maze[x][y] == -1){
+        return false;
+    }
+    return true;
+} 
+
 void bfs(pair<int,int>src){
     queue< pair<int,int> >q;
     int x = src.first;  // first value of pair.
