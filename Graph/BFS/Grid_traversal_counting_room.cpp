@@ -69,7 +69,18 @@ void bfs(pair<int,int>src){
     while(!q.empty()){
         pair<int,int>frnt = q.front();
         q.pop();
+     
+        int x = frnt.first;
+        int y = frnt.second;
 
+        for(int i = 0 ;i<4;i++){ // for top,bottom,left and right adjecent cell.
+            int new_x = x + dx[i];
+            int new_y = y + dy[i];
+            pair<int,int>adj_cell = {new_x,new_y};
+
+
+        }
+    }
 
 
 }
