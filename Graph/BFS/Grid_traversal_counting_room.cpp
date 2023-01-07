@@ -112,6 +112,11 @@ void bfs(pair<int,int>src){
             int new_x = x + dx[i];
             int new_y = y + dy[i];
             pair<int,int>adj_cell = {new_x,new_y};
+         
+            if(visited[new_x][new_y] == 0 && is_inMaze(adj_cell) == true && is_safe(adj_cell) == true){
+                visited[new_x][new_y] = 1;
+                q.push(adj_cell);
+            }
 
 
         }
