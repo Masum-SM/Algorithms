@@ -54,6 +54,18 @@ int main(){
             }
         }   
     }
+ 
+    int room_count = 0;
+    while(true){
+        pair<int,int> unvisited_pos = is_visited();
+
+        if(unvisited_pos == pair<int,int>(-1,-1)){
+            break;
+        }
+        bfs(unvisited_pos);
+        room_count++;
+    }
+    cout<<room_count<<endl;
 
 
     return 0;
