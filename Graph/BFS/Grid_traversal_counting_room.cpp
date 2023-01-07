@@ -42,6 +42,22 @@ const int N = 2002;
 int maze[N][N], visited[N][N];
 
 
+
+// ------------------------------- BFS --------------------------------------
+void bfs(pair<int,int>src){
+    queue < pair<int,int> > q; // Declare a pair type queue where pair type is int & int.
+    q.push(src);
+
+    while(!q.empty()){
+        pair<int,int>frnt = q.front();
+        q.pop();
+
+
+
+}
+
+
+
 int main(){
     
     cin>>n>>m;
