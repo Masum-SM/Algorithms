@@ -33,14 +33,12 @@ Output:
  */
 
 
-
 #include<bits/stdc++.h>
 using namespace std;
 
 int n,m;
 const int N = 2002;
 int maze[N][N], visited[N][N];
-
 
 // ----------------------------> Checking the cell in Maze or not <-----------------------------
 /* 
@@ -58,6 +56,7 @@ bool is_inMaze(pair<int,int>co_ord){
     return false;
 }
 
+
 // --------------------------> Checking the cell in room(safe) or wall <---------------------------
 /* 
 
@@ -73,8 +72,6 @@ bool is_safe(pair<int,int>co_ord){
     }
     return true;
 }
-
-
 
 /* 
 according the problem,
@@ -95,7 +92,6 @@ int dx[]= {0,0,-1,1};
 int dy[]={1,-1,0,0};
 
 
-
 // ------------------------------- BFS --------------------------------------
 void bfs(pair<int,int>src){
     queue < pair<int,int> > q; // Declare a pair type queue where pair type is int & int.
@@ -104,7 +100,7 @@ void bfs(pair<int,int>src){
     while(!q.empty()){
         pair<int,int>frnt = q.front();
         q.pop();
-     
+
         int x = frnt.first;
         int y = frnt.second;
 
@@ -112,20 +108,26 @@ void bfs(pair<int,int>src){
             int new_x = x + dx[i];
             int new_y = y + dy[i];
             pair<int,int>adj_cell = {new_x,new_y};
-         
+
             if(visited[new_x][new_y] == 0 && is_inMaze(adj_cell) == true && is_safe(adj_cell) == true){
                 visited[new_x][new_y] = 1;
                 q.push(adj_cell);
             }
-
-
         }
     }
 
-
 }
 
-
+pair<int,int> is_visited(){ // checking the cell is visited or not.
+    for(int i = 0 ; i < n ; i++){
+        for(int j = 0 ; j < m ; j++){
+            if(visited[i][j] == 0 && maze[i][j] == 0){ // if not visited and it is room not wall.
+                return {i,j};
+            }
+        }
+    }
+    return {-1,-1}; // return invalid cell.
+}
 
 int main(){
     
@@ -139,7 +141,6 @@ int main(){
             }
         }   
     }
- 
     int room_count = 0;
     while(true){
         pair<int,int> unvisited_pos = is_visited();
@@ -152,6 +153,6 @@ int main(){
     }
     cout<<room_count<<endl;
 
-
     return 0;
 }
+
