@@ -41,6 +41,25 @@ int n,m;
 const int N = 2002;
 int maze[N][N], visited[N][N];
 
+
+// ----------------------------> Checking the cell in Maze or not <-----------------------------
+/* 
+
+cell = {x,y}
+if x co-ordinate is out-of n (number of row) and y co-ordinate is out-of m (number of column), cell {x,y} is out of maze.
+
+ */
+bool is_inMaze(pair<int,int>co_ord){
+    int x = co_ord.first;
+    int y = co_ord.second;
+    if(0<= x < n && 0<= y <m){
+        return true;
+    }
+    return false;
+}
+
+
+
 /* 
 according the problem,
 we can move into right, left, top and down not corner movement.
