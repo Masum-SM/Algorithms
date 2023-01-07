@@ -58,6 +58,22 @@ bool is_inMaze(pair<int,int>co_ord){
     return false;
 }
 
+// --------------------------> Checking the cell in room(safe) or wall <---------------------------
+/* 
+
+cell = {x,y}
+if maze[x][y] == -1 it is not safe, cz we define wall(#) position as -1;
+
+ */
+bool is_safe(pair<int,int>co_ord){
+    int x = co_ord.first;
+    int y = co_ord.second;
+    if(maze[x][y] == -1){
+        return false;
+    }
+    return true;
+}
+
 
 
 /* 
