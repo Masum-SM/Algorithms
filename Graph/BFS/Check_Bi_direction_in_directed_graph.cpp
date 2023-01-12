@@ -6,6 +6,30 @@ vector<int>adj_node[N];
 int visited[N];
 
 
+bool bfs(int source){
+    queue<int>q;
+    q.push(source);
+
+    while(!q.empty()){
+        int frnt = q.front();
+        q.pop();
+        if(adj_node[frnt].empty()){
+            return false;
+        }
+        for(int value:adj_node[frnt]){
+            if(!is_bidrectional(frnt,value)){
+                return false;
+            }
+            if(!visited[value]){
+                q.push(value);
+                visited[value] = true;
+            }
+        }
+
+    }
+    return true;
+}
+
 
 int main(){
     int n,e;
