@@ -9,3 +9,4 @@
 
  **:heart: BFS (Depth-first search)**
  - [DFS Traversing (ITERATIVE) In Bi-Directional Graph](https://github.com/Masum-SM/Algorithms/blob/main/Graph/DFS/01_DFS_iterative.cpp)
+ - [DFS Traversing (RECURSIVE) In Bi-Directional Graph](https://github.com/Masum-SM/Algorithms/blob/main/Graph/DFS/02_DFS_recursive.cpp)
