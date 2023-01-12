@@ -38,8 +38,6 @@ bool bfs(int source){
     }
     return true;
 }
-
-
 int main(){
     int n,e;
     cin>>n>>e;
@@ -54,7 +52,6 @@ int main(){
     else{
         cout<<"The graph is bi-directional"<<endl;
     }
-
 
     return 0;
 }
