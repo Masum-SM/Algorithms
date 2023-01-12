@@ -5,6 +5,15 @@ const int N = 1e5;
 vector<int>adj_node[N];
 int visited[N];
 
+bool is_bidrectional(int frnt,int value){
+    for(int v : adj_node[value]){
+        if(v == frnt){
+            return true;
+        }
+    }
+    return false;
+
+}
 
 bool bfs(int source){
     queue<int>q;
