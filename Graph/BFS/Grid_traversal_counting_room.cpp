@@ -1,5 +1,8 @@
-// problem link - https://cses.fi/problemset/task/1192
-
+/*
+ problem link - https://cses.fi/problemset/task/1192
+ Coder : Md.Unus Masum
+ Date : 05-01-2023
+*/
 /* 
 
 Target : finding out the number of room in floor.
