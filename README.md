@@ -19,3 +19,4 @@
 
  **:heart: Problem Solving**
   - [Grid Traversing](https://github.com/Masum-SM/Algorithms/blob/main/Graph/BFS/Grid_traversal.cpp)
+  - [Grid traversal counting room](https://github.com/Masum-SM/Algorithms/blob/main/Graph/BFS/Grid_traversal_counting_room.cpp)
