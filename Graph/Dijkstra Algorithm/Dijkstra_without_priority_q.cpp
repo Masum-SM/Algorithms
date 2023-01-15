@@ -18,6 +18,20 @@ void dijkstra(int src)
 
     d[src] = 0;
 
+    for (int i = 1; i <= nodes; i++)
+    {
+        int selected_node = -1;
+        
+        for (int j = 1; i <= nodes; i++)
+        {
+            if (visited[j] == 0)
+            {
+                if (selected_node == -1 || d[j] < d[selected_node])
+                {
+                    selected_node = j;
+                }
+            }
+        }
 
     
     
