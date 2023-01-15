@@ -34,7 +34,17 @@ void dijkstra(int src)
         }
 
     
-    
+        visited[selected_node] = 1;
+
+        for (auto adj_entry : adj_list[selected_node])
+        {
+            int adj_node = adj_entry.first;
+            int edge_cst = adj_entry.second;
+            if (d[selected_node] + edge_cst < d[adj_node])
+            {
+                d[adj_node] = d[selected_node] + edge_cst;
+            }
+        }
     }
 }
 
