@@ -16,7 +16,9 @@
  - [DFS Traversing (RECURSIVE) In Bi-Directional Graph](https://github.com/Masum-SM/Algorithms/blob/main/Graph/DFS/02_DFS_recursive.cpp)
 
  **:heart: Dijkstra Algorithm**
-
+ - [Dijkstra Algorithm Without Priority Queue](https://github.com/Masum-SM/Algorithms/blob/main/Graph/Dijkstra%20Algorithm/Dijkstra_without_priority_q.cpp)
+ 
+ 
  **:heart: Problem Solving**
   - [Grid Traversing](https://github.com/Masum-SM/Algorithms/blob/main/Graph/BFS/Grid_traversal.cpp)
   - [Grid traversal counting room](https://github.com/Masum-SM/Algorithms/blob/main/Graph/BFS/Grid_traversal_counting_room.cpp)
