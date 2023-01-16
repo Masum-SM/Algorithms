@@ -3,6 +3,19 @@ using namespace std;
 const int N = 1e5;
 vector<int>adj_node[N];
 
+int visited[N];
+
+void bfs(int source){
+    queue<int>q;
+    q.push(source);
+    while(!q.empty()){
+        int frnt = q.front();
+        q.pop();
+
+
+    }
+}
+
 int main(){
     int n,e;
     cin>>n>>e;
