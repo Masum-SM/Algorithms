@@ -2,7 +2,6 @@
 using namespace std;
 const int N = 1e5;
 vector<int>adj_node[N];
-
 int visited[N];
 
 void bfs(int source){
@@ -11,7 +10,13 @@ void bfs(int source){
     while(!q.empty()){
         int frnt = q.front();
         q.pop();
+        for(int value:adj_node[frnt]){
+            if(!visited[value]){
+                q.push(value);
+                visited[value] = true;
 
+            }
+        }
 
     }
 }
@@ -26,7 +31,6 @@ int main(){
         adj_node[x].push_back(y);
         adj_node[y].push_back(x);
     }
-    
     for(int i = 1; i<n+1;i++){
         if(!visited[i]){
             bfs(i);
@@ -34,6 +38,7 @@ int main(){
         }
     }
     cout<<"Number of connected component : "<<count<<endl;
+
     return 0;
 }
 
