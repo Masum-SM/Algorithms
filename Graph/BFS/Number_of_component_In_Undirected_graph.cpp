@@ -13,7 +13,14 @@ int main(){
         adj_node[x].push_back(y);
         adj_node[y].push_back(x);
     }
-
+    
+    for(int i = 1; i<n+1;i++){
+        if(!visited[i]){
+            bfs(i);
+            count++;
+        }
+    }
+    cout<<"Number of connected component : "<<count<<endl;
     return 0;
 }
 
