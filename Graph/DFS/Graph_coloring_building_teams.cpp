@@ -37,6 +37,33 @@ using namespace std;
 const int N = 1e5+1;
 vector<int>adj_list[N];
 
+bool dfs(int source){
+    visited[source] = 1;
+    for(int adj_node : adj_list[source]){
+        if(visited[adj_node] == 0){
+
+            if(colored[source] == 1){
+                colored[adj_node] = 2;
+            }
+            else{
+                colored[adj_node] = 1;
+            }
+            
+            bool is_ok = dfs(adj_node);
+            if(!is_ok){
+                return false;
+            }
+        }
+        else{
+            if(colored[source] == colored[adj_node]){
+                return false;
+            }
+        }
+    }
+    return true;
+    
+}
+
 int main(){
     int n,e;
     cin>>n>>e;
