@@ -36,6 +36,7 @@ using namespace std;
 
 const int N = 1e5+1;
 vector<int>adj_list[N];
+int visited[N], colored[N];
 
 bool dfs(int source){
     visited[source] = 1;
