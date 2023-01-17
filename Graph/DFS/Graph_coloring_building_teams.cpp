@@ -47,6 +47,31 @@ int main(){
         adj_list[y].push_back(x);
     }
 
+    bool is_biColorable = true;
+
+    for(int i = 1 ; i <= n ; i++){
+        if(visited[i] == 0){
+            colored[i] = 1;
+            is_biColorable = dfs(i);
+            if(!is_biColorable) break;
+
+            // bool ok = dfs(i);
+            // if(!ok){
+            //     is_biColorable = false;
+            //     break;
+            // }
+        }
+    }
+
+    if(!is_biColorable){
+        cout<<"IMPOSSIBLE"<<endl;
+    }
+    else{
+        for(int i = 1 ; i <=n ; i++){
+            cout<<colored[i]<<" ";
+        }
+        cout<<endl;
+    }
 
 
     return 0;
