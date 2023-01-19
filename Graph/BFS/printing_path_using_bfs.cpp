@@ -30,7 +30,27 @@ int main(){
     int src = 1;
     int dst = nodes;
 
+    if(visited[nodes] == 1){
+        cout<<level[nodes]<<endl;
+        
+        int selected_node = nodes;
+        while(true){
+            path.push_back(selected_node);
+            if(parent[selected_node] == -1){
+                break;
+            }
 
+            selected_node = parent[selected_node];
+        }
+        reverse(path.begin(),path.end());
+        for(int node : path){
+            cout<<node<<" ";
+        }
+    }
+    else{
+        cout<<"IMPOSSIBLE"<<endl;
+    }
+    cout<<endl;
 
     return 0;
 }
