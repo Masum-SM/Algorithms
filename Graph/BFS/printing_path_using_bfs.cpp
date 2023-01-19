@@ -14,6 +14,16 @@ const int N = 1e5+9;
 vector<int>adj_list[N];
 int visited[N],level[N],parent[N];
 
+void bfs(int source){
+    queue<int>q;
+    q.push(source);
+    level[source] = 1;
+    parent[source] = -1;
+    visited[source] = 1;
+
+
+
+}
 
 int main(){
     int nodes,edges;
