@@ -1,4 +1,3 @@
-
 /* 
 problem link - https://cses.fi/problemset/task/1667/
 Writer - Md.Unus Masum
@@ -22,7 +21,20 @@ void bfs(int source){
     visited[source] = 1;
 
 
+    while(!q.empty()){
+        int frnt = q.front();
+        q.pop();
 
+        for(int adj_node:adj_list[frnt]){
+            if(visited[adj_node]==0){
+                parent[adj_node] = frnt;
+                visited[adj_node] = 1;
+                level[adj_node] = level[frnt]+1;
+                q.push(adj_node);
+            }
+        }
+
+    }
 }
 
 int main(){
@@ -35,10 +47,11 @@ int main(){
         adj_list[y].push_back(x);
     }
 
-   
     vector<int>path;
     int src = 1;
     int dst = nodes;
+
+    bfs(src);
 
     if(visited[nodes] == 1){
         cout<<level[nodes]<<endl;
@@ -61,6 +74,8 @@ int main(){
         cout<<"IMPOSSIBLE"<<endl;
     }
     cout<<endl;
+    
+
 
     return 0;
 }
