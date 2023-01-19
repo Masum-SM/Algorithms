@@ -12,7 +12,7 @@ using namespace std;
 
 const int N = 1e5+9;
 vector<int>adj_list[N];
-
+int visited[N],level[N],parent[N];
 
 
 int main(){
@@ -26,7 +26,10 @@ int main(){
     }
 
    
-    
+    vector<int>path;
+    int src = 1;
+    int dst = nodes;
+
 
 
     return 0;
