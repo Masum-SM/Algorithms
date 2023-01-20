@@ -23,4 +23,6 @@
   - [Grid Traversing](https://github.com/Masum-SM/Algorithms/blob/main/Graph/BFS/Grid_traversal.cpp)
   - [Grid traversal counting room](https://github.com/Masum-SM/Algorithms/blob/main/Graph/BFS/Grid_traversal_counting_room.cpp)
   - [Graph Coloring Building Teams](https://github.com/Masum-SM/Algorithms/blob/main/Graph/DFS/Graph_coloring_building_teams.cpp)
+  - [Path Printing Using BFS](https://github.com/Masum-SM/Algorithms/blob/main/Graph/BFS/printing_path_using_bfs.cpp)
+  
 
