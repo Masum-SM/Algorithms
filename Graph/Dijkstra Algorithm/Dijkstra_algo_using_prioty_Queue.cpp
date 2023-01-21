@@ -72,6 +72,20 @@ int main() {
     
     int current_node = nodes;
     vector<int>path;
+    
+      while(true) {
+        path.push_back(current_node);
+        if(current_node == src) {
+            break;
+        }
+        current_node = parent[current_node];
+    }
+    reverse(path.begin(), path.end());
+
+    for(int node: path) {
+        cout<<node<<" ";
+    }
+    cout<<endl;
 
  return 0; 
 }
