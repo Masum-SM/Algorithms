@@ -48,8 +48,6 @@ void dijkstra(int src) {
 }
 
 
-
-
 int main() {
 
     cin >> nodes >> edges;
@@ -60,8 +58,8 @@ int main() {
         adj_list[u].push_back({ v, w });
         adj_list[v].push_back({ u, w });
     }
-    
-     int src = 1;
+
+    int src = 1;
     dijkstra(src);
 
     if(visited[nodes] == 0) {
@@ -72,8 +70,8 @@ int main() {
     
     int current_node = nodes;
     vector<int>path;
-    
-      while(true) {
+
+    while(true) {
         path.push_back(current_node);
         if(current_node == src) {
             break;
@@ -86,6 +84,14 @@ int main() {
         cout<<node<<" ";
     }
     cout<<endl;
-
- return 0; 
 }
+
+/*
+5 6
+1 2 2
+2 5 5
+2 3 4
+1 4 1
+4 3 3
+3 5 1
+ */
