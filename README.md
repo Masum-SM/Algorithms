@@ -17,8 +17,11 @@
 
  **:heart: Dijkstra Algorithm**
  - [Dijkstra Algorithm Without Priority Queue](https://github.com/Masum-SM/Algorithms/blob/main/Graph/Dijkstra%20Algorithm/Dijkstra_without_priority_q.cpp)
-  - [Dijkstra Algorithm Using Priority Queue](https://github.com/Masum-SM/Algorithms/blob/main/Graph/Dijkstra%20Algorithm/Dijkstra_algo_using_prioty_Queue.cpp)
+ - [Dijkstra Algorithm Using Priority Queue](https://github.com/Masum-SM/Algorithms/blob/main/Graph/Dijkstra%20Algorithm/Dijkstra_algo_using_prioty_Queue.cpp)
  
+ 
+ 
+ **:heart: Dijkstra Algorithm**
  
  **:heart: Problem Solving**
   - [Grid Traversing](https://github.com/Masum-SM/Algorithms/blob/main/Graph/BFS/Grid_traversal.cpp)
